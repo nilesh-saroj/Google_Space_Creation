@@ -31,7 +31,7 @@ function replyToMessageFromSpreadsheets() {
   var rows = sheet.getRange(lastProcessedRow + 1, 1, sheet.getLastRow() - lastProcessedRow, sheet.getLastColumn()).getValues();
 
   rows.forEach(function(row, index) {
-    // Extract data from the row and construct the message
+    // Extract data from the row and construct the message,  row 0 means first column (A column), index 1 means frst column (A column)
     var quoteno = row [1];
     var companyName = row[6];
     var category = row[4];
